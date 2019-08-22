@@ -3,6 +3,6 @@ services:
 
 script:
   - git clone https://github.com/aalquist/cli-query
+  - bash dockerlogin.sh
   - bash build.sh
   - echo $TRAVIS_SECURE_ENV_VARS
-  - echo $DOCKERNAME
