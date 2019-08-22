@@ -5,4 +5,4 @@ script:
   - git clone https://github.com/aalquist/cli-query
   - bash build.sh
   - echo $TRAVIS_SECURE_ENV_VARS
-  
+  - echo $DOCKERNAME
