@@ -3,12 +3,6 @@ services:
 
 script:
   - git clone https://github.com/aalquist/cli-query
+  - bash build.sh
   - echo $TRAVIS_SECURE_ENV_VARS
-  - commitId=$(git log -1 --pretty=%H)
-  - echo $commitId
-  - NAME=aaalquis/cli-query-docker
-  - echo $NAME
-  - docker build -t $NAME:$commitId ./cli-query
-  - docker tag $NAME:$commitId $NAME:latest 
-  - docker tag $NAME:$commitId $NAME:v0.1 
-  - docker push $NAME 
+  
